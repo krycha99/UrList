@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Movie;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,8 +17,17 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', [
+        'heading' => 'test',
+        'movies' => Movie::all()
+    ]);
 });
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/movies/{id}', function($id){
+    return view('movie',[
+    'movie' => Movie::find($id)
+    ]);
+});

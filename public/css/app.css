@@ -1,13 +1,23 @@
  /* Modify the background color */
          
  .navbar-custom {
-    background-color: #0914ad;
+    background: linear-gradient(to bottom, #003399 0%, #3a3c42 100%);
 }
+
  /* layout */
 body {
 
 background-color: #50535c;
+color:white;
 
 }
+ /* footer */
+footer {
+    background-color: #50535c;
+} 
 
+/* movies */
+.movies {
+    background: linear-gradient(to bottom, #003399 0%, #3a3c42 100%);
+}
 
