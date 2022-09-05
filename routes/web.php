@@ -3,6 +3,8 @@
 use App\Models\Movie;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,18 +18,19 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes();
 
-Route::get('/', function () {
-    return view('index', [
-        'heading' => 'test',
-        'movies' => Movie::all()
-    ]);
-});
+Route::get('/', [MovieController::class, 'index']);
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/movies/create', [MovieController::class, 'create'])->middleware('auth');
+
+Route::post('/movies', [MovieController::class, 'store']);
 
 Route::get('/movies/{id}', function($id){
     return view('movie',[
     'movie' => Movie::find($id)
     ]);
 });
+
+Route::get('/user/urList', [UserController::class, 'urList'])->middleware('auth');

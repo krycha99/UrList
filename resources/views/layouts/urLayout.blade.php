@@ -44,7 +44,7 @@
           </form>
             @else
             <img src={{ url("images/profil2.png") }} class="rounded-circle w-14 mr-2" alt="">
-            <a href="/user/urList"><button class="nav-link btn btn-outline-primary mr-2" type="submit">Your List</button></a>
+            <button class="nav-link btn btn-outline-primary mr-2" type="submit">Your list</button>
             <button type="submit">
               <a class="nav-link btn btn-outline-primary  "type="submit" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">
@@ -84,6 +84,7 @@
           <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-primary" type="submit">Search</button>
+      <button class="btn btn-outline-primary" type="submit">test</button>
     </form>
         </div>
       </nav>
@@ -99,14 +100,11 @@
   <footer class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold text-white h-16 mt-24 opacity-90 md:justify-center">
             <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
 
-            @auth
-              
             <a
                 href="/movies/create"
                 class="absolute top-1/3 right-10 bg-black text-white py-1 px-5"
                 >Add Movie</a
             >
-            @endauth
         </footer>
 
 </body>

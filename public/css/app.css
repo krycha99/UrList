@@ -21,3 +21,10 @@ footer {
     background: linear-gradient(to bottom, #003399 0%, #3a3c42 100%);
 }
 
+/* images */
+.movieimg {
+    width: 150px;
+    height: 280px;
+}
+
+/* dropdown */
