@@ -10,15 +10,13 @@
     @unless(count($movies) == 0)
     
     @foreach ($movies as $movie)
-    {{-- <h2>{{ $movie['title'] }}</h2>
-    <p>{{ $movie['description'] }}</p> --}}
     <div class="movies  border border-gray-200 rounded p-6">
         <div class="d-flex">
             <img
                 class="movieimg  mr-6 "
                 width="20"
                 height="10"
-                src="images/movie-icon.png"
+                src="{{ $movie->poster ? asset('storage/' . $movie->poster) : asset('images/movie-icon.png') }}"
                 alt=""
             />
             <div class>
@@ -27,28 +25,7 @@
                 </h3>
                 <div class="text-xl font-bold mb-4">{{ $movie->type }} {{ $movie->year }} </div>
                 <div class="text-xl font-bold mb-4">Episodes: {{ $movie->episodes }} </div>
-                <ul class="flex">
-                    <li
-                        class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                    >
-                        <a href="#">Laravel</a>
-                    </li>
-                    <li
-                        class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                    >
-                        <a href="#">API</a>
-                    </li>
-                    <li
-                        class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                    >
-                        <a href="#">Backend</a>
-                    </li>
-                    <li
-                        class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs"
-                    >
-                        <a href="#">Vue</a>
-                    </li>
-                </ul>
+                <x-movie-category :categoriesCsv="$movie->categories" />
                 <div class="text-xl font-bold mb-4">{{ $movie->description }}</div>
             </div>
         </div>

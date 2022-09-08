@@ -5,7 +5,7 @@
         <div class="d-flex">
             <img
                 class="hidden w-48 mr-6 md:block"
-                src={{ url("images/movie-icon.png") }}
+                src="{{ $movie->poster ? asset('storage/' . $movie->poster) : asset('images/movie-icon.png') }}"
                 alt=""
             />
             <div>

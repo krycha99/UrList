@@ -11,8 +11,8 @@ class MovieController extends Controller
      public function index()
     {
         return view('index', [
-            'heading' => 'test',
-            'movies' => Movie::all()
+            'movies' => Movie::latest()->filter
+            (request(['category', 'search']))->get()
         ]);
     }
     
@@ -32,6 +32,10 @@ class MovieController extends Controller
             'description' => 'required'
         ]);
         
+        if($request->hasFile('poster')) {
+            $formFields['poster'] = $request->file('poster')->store('posters', 'public');
+        }
+
         Movie::create($formFields);
 
         return redirect('/');

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->String('year');
             $table->integer('episodes');
             $table->String('categories');
+            $table->String('poster')->nullable();
             $table->longText('description');
             $table->timestamps();
         });

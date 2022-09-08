@@ -28,9 +28,13 @@ Route::get('/movies/create', [MovieController::class, 'create'])->middleware('au
 Route::post('/movies', [MovieController::class, 'store']);
 
 Route::get('/movies/{id}', function($id){
-    return view('movie',[
+    return view('movies/movie',[
     'movie' => Movie::find($id)
     ]);
 });
 
 Route::get('/user/urList', [UserController::class, 'urList'])->middleware('auth');
+
+Route::get('/user/{user}/edit', [UserController::class, 'edit'])->middleware('auth');
+
+Route::put('/user/{user}', [UserController::class, 'update'])->middleware('auth');

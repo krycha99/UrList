@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Movies;
+use App\Models\Movie;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Movies::create([
+        Movie::create([
             'title' => 'Kung Fu Panda',
             'type' => 'movie',
             'year' => '2008',
@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Niezgrabna i otyła panda zostaje nieoczekiwanie wybrana do wypełnienia starożytnej przepowiedni. Czy zdąży opanować sztukę kung-fu, nim pojawi się groźny przeciwnik?'
         ]);
 
-        Movies::create([
+        Movie::create([
             'title' => 'The Lord of the Rings: The Two Towers',
             'type' => 'movie',
             'year' => '2002',
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Drużyna Pierścienia zostaje rozbita, lecz zdesperowany Frodo za wszelką cenę chce wypełnić powierzone mu zadanie. Aragorn z towarzyszami przygotowuje się, by odeprzeć atak hord Sarumana.'
         ]);
 
-        Movies::create([
+        Movie::create([
             'title' => 'Forrest Gump',
             'type' => 'movie',
             'year' => '1994',
@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Historia życia Forresta, chłopca o niskim ilorazie inteligencji z niedowładem kończyn, który staje się miliarderem i bohaterem wojny w Wietnamie.'
         ]);
 
-        Movies::create([
+        Movie::create([
             'title' => 'shrek',
             'type' => 'movie',
             'year' => '2001',
@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'By odzyskać swój dom, brzydki ogr z gadatliwym osłem wyruszają uwolnić piękną księżniczkę.'
         ]);
 
-        Movies::create([
+        Movie::create([
             'title' => 'Intouchables',
             'type' => 'movie',
             'year' => '2011',
@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'Sparaliżowany milioner zatrudnia do opieki młodego chłopaka z przedmieścia, który właśnie wyszedł z więzienia.'
         ]);
 
-        Movies::create([
+        Movie::create([
             'title' => 'The Prestige',
             'type' => 'movie',
             'year' => '2006',

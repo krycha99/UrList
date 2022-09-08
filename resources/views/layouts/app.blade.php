@@ -43,7 +43,8 @@
             @endif
           </form>
             @else
-            <img src={{ url("images/profil2.png") }} class="rounded-circle w-14 mr-2" alt="">
+            <a href="/user/{{ Auth::user()->id }}/edit"><img src={{ url("images/profil2.png") }} class="rounded-circle w-14 mr-2" alt=""></a>
+            <a class="mr-2" href="/user/{{ Auth::user()->id }}/edit">{{ Auth::user()->username }}</a>
             <a href="/user/urList"><button class="nav-link btn btn-outline-primary mr-2" type="submit">Your List</button></a>
             <button type="submit">
               <a class="nav-link btn btn-outline-primary  "type="submit" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -61,7 +62,7 @@
 
       <!--Second navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-        <a class="navbar-brand" href="#">Film genre:</a>
+        <a class="navbar-brand" href="#">Genre:</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -74,15 +75,22 @@
                 Choose
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+
+                <a class="dropdown-item" href="/?category=action">action</a>
+                <a class="dropdown-item" href="/?category=anime">anime</a>
+                <a class="dropdown-item" href="/?category=animation">animation</a>
+                <a class="dropdown-item" href="/?category=adventure">adventure</a>
+                <a class="dropdown-item" href="/?category=comedy">comedy</a>
+                <a class="dropdown-item" href="/?category=drama">drama</a>
+                <a class="dropdown-item" href="/?category=fantasy">fantasy</a>
+                <a class="dropdown-item" href="/?category=family">family</a>
+                <a class="dropdown-item" href="/?category=thriller">thriller</a>
+                
               </div>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <form class="form-inline my-2 my-lg-0" action="/">
+      <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-primary" type="submit">Search</button>
     </form>
         </div>
