@@ -24,12 +24,13 @@ class UserController extends Controller
             'username' => 'required'
         ]);
 
-        if($request->hasFile('porifleImg'))
+        if($request->hasFile('profileImg'))
         {
-            $formFields['profilImg'] = $request->file('profileImg')->store('posters', 'public');
+            $formFields['profileImg'] = $request->file('profileImg')->store('avatars', 'public');
         }
 
         $user->username = $formFields['username'];
+        $user->profileImg = $formFields['profileImg'];
         $user->save();
 
         return redirect('/')->with('message', 'Profile edited successfully!');

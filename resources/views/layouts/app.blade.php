@@ -43,7 +43,7 @@
             @endif
           </form>
             @else
-            <a href="/user/{{ Auth::user()->id }}/edit"><img src={{ url("images/profil2.png") }} class="rounded-circle w-14 mr-2" alt=""></a>
+            <a href="/user/{{ Auth::user()->id }}/edit"><img src="{{ Auth::user()->profileImg ? asset('storage/' . Auth::user()->profileImg) : asset('images/profil2.png') }}" class="rounded-circle w-14 mr-2" alt=""></a>
             <a class="mr-2" href="/user/{{ Auth::user()->id }}/edit">{{ Auth::user()->username }}</a>
             <a href="/user/urList"><button class="nav-link btn btn-outline-primary mr-2" type="submit">Your List</button></a>
             <button type="submit">

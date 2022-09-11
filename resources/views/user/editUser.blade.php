@@ -30,12 +30,12 @@
                 </div>
     
                 <div class="row">
-                    <label for="image" class="col-md-4 col-form-label">Profile Image</label>
+                    <label for="profileImg" class="col-md-4 col-form-label">Profile Image</label>
 
-                    <input type="file" class="form-control-file" id="image" name="image">
+                    <input type="file" class="form-control-file" id="profileImg" name="profileImg">
 
-                    @if ($errors->has('image'))
-                        <strong>{{ $errors->first('image') }}</strong>
+                    @if ($errors->has('profileImg'))
+                        <strong>{{ $errors->first('profileImg') }}</strong>
                     @endif
                 </div>
 
