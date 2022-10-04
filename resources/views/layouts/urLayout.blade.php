@@ -45,7 +45,7 @@
             @else
             <a href="/user/{{ Auth::user()->id }}/edit"><img src="{{ Auth::user()->profileImg ? asset('storage/' . Auth::user()->profileImg) : asset('images/profil2.png') }}" class="rounded-circle w-14 mr-2" alt=""></a>
             <a class="mr-2" href="/user/{{ Auth::user()->id }}/edit">{{ Auth::user()->username }}</a>
-            <button class="nav-link btn btn-outline-primary mr-2" type="submit">Your list</button>
+            <a href="/user/urList"><button class="nav-link btn btn-outline-primary mr-2" type="submit">Your List</button></a>
             <button type="submit">
               <a class="nav-link btn btn-outline-primary  "type="submit" href="{{ route('logout') }}" onclick="event.preventDefault();
               document.getElementById('logout-form').submit();">
@@ -62,10 +62,10 @@
 
       <!--Second navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-      <button class="btn btn-outline-primary mr-2" type="submit">All</button>
-      <button class="btn btn-outline-primary mr-2" type="submit">Watching</button>
-      <button class="btn btn-outline-primary mr-2" type="submit">Plan to watch</button>
-      <button class="btn btn-outline-primary mr-2" type="submit">Completed</button>
+      <a href="/user/urList"><button class="btn btn-outline-primary mr-2" type="submit">All</button></a>
+      <a href="/user/urList/watching"><button class="btn btn-outline-primary mr-2" type="submit">Watching</button></a>
+      <a href="/user/urList/plantowatch"><button class="btn btn-outline-primary mr-2" type="submit">Plan to watch</button></a>
+        <a href="/user/urList/completed"><button class="btn btn-outline-primary mr-2" type="submit">Completed</button></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

@@ -24,4 +24,9 @@ class Movie extends Model
         }
 
     }
+
+    public function listed()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }
