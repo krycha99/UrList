@@ -102,7 +102,7 @@
 
 </head>
 <body>
-  <main class="py-4">
+  <main class="py-4 mb-10">
     
     @yield('content')
   </main>

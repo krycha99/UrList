@@ -11,8 +11,10 @@ class UserController extends Controller
 {
     public function urList()
     {
+
+        
         return view('user/urList', [
-            'movies' => Auth::user()->listing()->where('user_id', Auth::user()->id)->get(),
+            'movies' => Auth::user()->listing()->where('user_id', Auth::user()->id)->latest()->get(),
             //dd(Auth::user()->listing()->where('user_id', Auth::user()->id)->get())
         ]);
     }

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href={{ url("css/app.css") }}>
 
+    @vite(['resources/js/app.js'])
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -84,12 +86,12 @@
 
 </head>
 <body>
-  <main class="py-4">
+  <main class="py-4 mb-10">
     
     @yield('content')
   </main>
 
-  <footer class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold text-white h-16 mt-24 opacity-90 md:justify-center">
+  <footer class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold text-white h-16 mt-24 opacity-90 md:justify-center" ">
             <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
 
             <a

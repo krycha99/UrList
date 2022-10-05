@@ -27,6 +27,6 @@ class Movie extends Model
 
     public function listed()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class)->withPivot('lStatus', 'episodesWatched');
     }
 }
