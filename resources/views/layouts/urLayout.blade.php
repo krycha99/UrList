@@ -13,6 +13,7 @@
 
     @vite(['resources/js/app.js'])
 
+    <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -29,7 +30,7 @@
     <title>UrList</title>
 
     <!--First navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0C1618">
         <a class="navbar-brand" href="/"><img src="/images/logo.svg" style="height: 50px; background-color:dimgray " class="logo rounded "></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -76,10 +77,10 @@
           <ul class="navbar-nav mr-auto">
            
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-primary" type="submit">Search</button>
-    </form>
+          <form class="form-inline my-2 my-lg-0" action="/user/urList">
+            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
         </div>
       </nav>
       
@@ -97,9 +98,9 @@
             <a
                 href="/movies/create"
                 class="absolute top-1/3 right-10 bg-black text-white py-1 px-5"
-                >Add Movie</a
+                >Add Movie/Series</a
             >
         </footer>
-
+        <x-flash-message /> 
 </body>
 </html>

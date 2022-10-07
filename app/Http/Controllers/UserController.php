@@ -11,35 +11,30 @@ class UserController extends Controller
 {
     public function urList()
     {
-
-        
         return view('user/urList', [
-            'movies' => Auth::user()->listing()->where('user_id', Auth::user()->id)->latest()->get(),
-            //dd(Auth::user()->listing()->where('user_id', Auth::user()->id)->get())
+            'movies' => Auth::user()->listing()->where('user_id', Auth::user()->id)->latest()->filter
+            (request(['category', 'search']))->get()
         ]);
     }
 
     public function watching()
     {
         return view('user/urList', [
-            'movies' => Auth::user()->listing()->where('lstatus', 'Watching')->get(),
-            //dd(Auth::user()->listing()->where('user_id', Auth::user()->id)->get())
+            'movies' => Auth::user()->listing()->where('lstatus', 'Watching')->get()
         ]);
     }
 
     public function plantowatch()
     {
         return view('user/urList', [
-            'movies' => Auth::user()->listing()->where('lstatus', 'Plan to watch')->get(),
-            //dd(Auth::user()->listing()->where('user_id', Auth::user()->id)->get())
+            'movies' => Auth::user()->listing()->where('lstatus', 'Plan to watch')->get()
         ]);
     }
 
     public function completed()
     {
         return view('user/urList', [
-            'movies' => Auth::user()->listing()->where('lstatus', 'Completed')->get(),
-            //dd(Auth::user()->listing()->where('user_id', Auth::user()->id)->get())
+            'movies' => Auth::user()->listing()->where('lstatus', 'Completed')->get()
         ]);
     }
 

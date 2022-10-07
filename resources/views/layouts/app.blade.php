@@ -13,7 +13,7 @@
     
     @vite(['resources/js/app.js'])
 
-
+    <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -30,8 +30,8 @@
     <title>UrList</title>
 
     <!--First navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/"><img src="/images/logo.svg" style="height: 50px; background-color:dimgray " class="logo rounded "></a>
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0C1618">
+        <a class="navbar-brand" href="/"><img src="/images/logo.svg" style="height: 50px; " class="logo rounded "></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -101,24 +101,24 @@
       
 
 </head>
-<body>
+<body class="h-ful">
   <main class="py-4 mb-10">
     
     @yield('content')
   </main>
 
   <footer class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold text-white h-16 mt-24 opacity-90 md:justify-center">
-            <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
+            <p class="ml-2 mt-4">Copyright &copy; 2022, All Rights reserved</p>
 
             @auth
               
             <a
                 href="/movies/create"
                 class="absolute top-1/3 right-10 bg-black text-white py-1 px-5"
-                >Add Movie</a
+                >Add Movie/Series</a
             >
             @endauth
         </footer>
-
+       <x-flash-message /> 
 </body>
 </html>

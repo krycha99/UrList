@@ -4,8 +4,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 @csrf
 @section('content')
-    <div class="border border-gray-200 rounded p-6" style="width:1000px; margin:0 auto;">
-        <div class="d-flex">
+    <div class="flex border border-gray-200 rounded p-6 w-full" style="max-width:60%; margin:0 auto;">
+        <div class="d-flex" >
             <img
                 class="hidden w-48 mr-6 md:block"
                 src="{{ $movie->poster ? asset('storage/' . $movie->poster) : asset('images/movie-icon.png') }}"
@@ -21,11 +21,11 @@
             </div>
             
               
-            @auth    
-        <div id="app" class="ml-6">
-          <list-component movie-id="{{ $movie->id }}" liststatus="{{ $liststatus }} " lstatus="{{ $lstatus}}" episodes="{{ $movie->episodes }}" eWatch="{{ $ewatch }}"></list-component>
-        </div>
-          @endauth
+                @auth    
+            <div id="app" class="ml-auto absolute right-1/4 font-bold  "  >
+            <list-component movie-id="{{ $movie->id }}" liststatus="{{ $liststatus }} " lstatus="{{ $lstatus}}" episodes="{{ $movie->episodes }}" eWatch="{{ $ewatch }}"></list-component>
+            </div>
+            @endauth
             
         </div>
     

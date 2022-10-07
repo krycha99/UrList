@@ -40,7 +40,7 @@ class MovieController extends Controller
 
         Movie::create($formFields);
 
-        return redirect('/');
+        return redirect('/')->with('message', 'Movie/Series added successfully');
     }
    
 }

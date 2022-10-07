@@ -26,7 +26,7 @@
                 <div class="text-xl font-bold mb-4">{{ $movie->type }} {{ $movie->year }} </div>
                 <div class="text-xl font-bold mb-4">Episodes: {{ $movie->episodes }} </div>
                 <x-movie-category :categoriesCsv="$movie->categories" />
-                <div class="text-xl font-bold mb-4">{{ $movie->description }}</div>
+                <div class="text-xl  mb-4">{{ $movie->description }}</div>
             </div>
         </div>
     </div>

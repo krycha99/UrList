@@ -57,8 +57,6 @@ Route::get('/user/{user}/edit', [UserController::class, 'edit'])->middleware('au
 
 Route::put('/user/{user}', [UserController::class, 'update'])->middleware('auth');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::post('list/{movie}', [ListController::class, 'Add']);
 
 Route::post('list/{movie}/drop', [ListController::class, 'Drop']);
