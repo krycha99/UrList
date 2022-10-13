@@ -1,5 +1,5 @@
 <h1>UrList</h1>
-UrList is a simple application for adding movies and series and tracking your progress with it. Created using the laravel framework.
+UrList is a simple application for adding movies and series and tracking your progress with it. Created using the Laravel framework.
 Database with included examples is named "urlist.sql".
 
 Preview:
