@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center" style="color: black;>
-        <div class="col-md-8">
-            <div class="card">
+<div class="container" style="margin:0 auto; height:80vh;">
+    <div class="row justify-content-center" style="color: white;">
+        <div class="col-md-8 border border-gray-200 rounded" style="background-image: radial-gradient( #003366, #0C1618);" >
+            <div class="card" style=" background-image: radial-gradient( #003366, #0C1618);" >
                 <div class="card-header">Logged in successfully!</div>
 
                 <div class="card-body align-self-center">

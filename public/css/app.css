@@ -1,5 +1,4 @@
- /* Modify the background color */
-         
+ /* Modify the background color of second navbar */        
  .navbar-custom {
     background: linear-gradient(to bottom, #003366 0%, #003366 100%);
 }
@@ -9,7 +8,7 @@ body {
     
     background: linear-gradient(to top, #0C1618  0%, #003366 170%);
     color:white;
-
+    background-size:100% ;
 }
 
  /* footer */
@@ -19,17 +18,7 @@ footer {
 
 /* movies */
 .movies {
-    /* background: linear-gradient(to bottom, grey 0%, grey 100%); */
-    
-     /* border-color: coral;
-     background-color: #7C7A7A; */
-    background-image:
-    radial-gradient(
-
-        #003366,
-        #0C1618
-        
-    );
+    background-image: radial-gradient( #003366, #0C1618);
     
 }
 

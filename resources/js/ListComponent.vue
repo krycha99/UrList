@@ -72,20 +72,7 @@ import axios from 'axios';
                     console.log(response.data);
                     window.location.reload();
                   })
-              //dropd.style.display = 'none';
-              //addBtn.style.display  = 'initial';
                 } 
-
-                // else {
-                //   axios.post('/list/' + this.movieId + '/drop').then(response => {
-                //     this.status = ! this.status;
-                //     console.log(response.data);
-                //     console.log(this.status);
-                //   })
-                //   //dropd.style.display = 'initial';
-                //   //addBtn.style.display = 'none';
-                // }
-                
           },
           watchBtn(){
             axios.post('/list/' + this.movieId + '/watching').then(response => {
@@ -147,7 +134,6 @@ import axios from 'axios';
               return 'Remove';
             }else {
               this.addBtnvalue = true;
-             // this.dropvalue = false;
               return 'Add to list';
             }
             

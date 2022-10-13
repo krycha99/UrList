@@ -31,7 +31,7 @@
 
     <!--First navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #0C1618">
-        <a class="navbar-brand" href="/"><img src="/images/logo.svg" style="height: 50px; background-color:dimgray " class="logo rounded "></a>
+        <a class="navbar-brand" href="/"><img src="/images/logo.svg" style="height: 50px;" class="logo rounded "></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -86,7 +86,7 @@
       
 
 </head>
-<body>
+<body class="h-ful">
   <main class="py-4 mb-10">
     
     @yield('content')

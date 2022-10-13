@@ -33,7 +33,7 @@
     @endforeach
 
     @else   
-     <p>No movies found</p>
+     <p>No movies/series found</p>
     @endunless
 </div>
 @endsection
